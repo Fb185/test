@@ -1,21 +1,26 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Gun P2P Messaging</title>
-    <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
-  </head>
-  <body>
-    <h1>Gun P2P Messaging</h1>
+<head>
+  <title>Gun Chat App</title>
+</head>
+<body>
+  <h1>Gun Chat App</h1>
 
-    <label for="peer-input">Peer:</label>
-    <input type="text" id="peer-input" />
+  <!-- Input form to send messages -->
+  <input type="text" id="message-input" placeholder="Enter your message" />
+  <button onclick="sendMessage()">Send</button>
 
-    <label for="message-input">Message:</label>
-    <input type="text" id="message-input" />
+  <!-- Section to display messages -->
+  <section id="messages-section">
+    <h2>Messages:</h2>
+    <ul id="messages-list"></ul>
+  </section>
 
-    <button onclick="sendMessage()">Send</button>
+  <!-- Include the Gun library -->
+  <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
 
-    <script src="app.js"></script>
-  </body>
+  <!-- Include your application JavaScript file -->
+  <script src="app.js"></script>
+</body>
 </html>
